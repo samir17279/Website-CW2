@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Restaurant</title>
+    <!-- Link the CSS file here -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .container {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: black; /* Set the background to black */
+      }
+
+      .container form {
+        width: 670px;
+        height: 600px;
+        display: flex;
+        justify-content: center;
+        border-radius: 15px;
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(15px);
+        flex-wrap: wrap;
+      }
+
+      .container form h1 {
+        color: orange; /* Orange color for heading */
+        font-weight: 700;
+        line-height: 2;
+        margin-top: 20px;
+        width: 500px;
+        text-align: center;
+      }
+
+      .container form input {
+        width: 300px;
+        height: 50px;
+        padding-left: 10px;
+        outline: none;
+        border: none;
+        font-size: 20px;
+        margin-bottom: 10px;
+        background: none;
+        border-bottom: 2px solid orange; /* Orange border for input fields */
+        color: black; /* Black text color */
+      }
+
+      .container form input::placeholder {
+        color: black; /* Black placeholder text */
+      }
+
+      .container form #lastName,
+      .container form #mobile {
+        margin-left: 20px;
+      }
+
+      .container form h4 {
+        color: orange; /* Orange color for the 'Your Message' heading */
+        font-weight: 300;
+        width: 600px;
+        margin-top: 20px;
+      }
+
+      .container form textarea {
+        background: none;
+        border: none;
+        border-bottom: 2px solid orange; /* Orange border for textarea */
+        color: black; /* Black text color */
+        font-weight: 200;
+        font-size: 20px;
+        padding: 10px;
+        outline: none;
+        min-height: 90px;
+        max-height: 90px;
+        min-width: 620px;
+        max-width: 620px;
+      }
+
+      .container form #button {
+        border: none;
+        background: orange; /* Orange background for the button */
+        border-radius: 5px;
+        margin-top: 20px;
+        font-weight: 600;
+        font-size: 24px;
+        color: white; /* White text color for the button */
+        width: 200px;
+        height: 60px;
+        padding: 0;
+        margin-bottom: 30px;
+        transition: 0.3s;
+      }
+
+      .container form #button:hover {
+        background: #ff6f00; /* Slightly darker orange on hover */
+        color: white;
+        transition: 0.5s ease-in-out;
+      }
+
+      /* Restaurant Details Section */
+      .details {
+        width: 80%;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      .details h2 {
+        color: orange; /* Orange color for the section heading */
+        font-weight: 700;
+        font-size: 28px;
+      }
+
+      .details p {
+        font-size: 18px;
+        margin: 10px 0;
+        color: white; /* White text color */
+      }
+
+      .details a {
+        color: orange; /* Orange link color */
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .details a:hover {
+        color: #ff6f00; /* Slightly darker orange on hover */
+        text-decoration: underline;
+      }
+
+      .details h4 {
+        margin-top: 20px;
+        font-size: 20px;
+        color: white; /* White color for h4 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form id="contactForm">
+        <h1>Contact Us</h1>
+        <input type="text" id="firstName" placeholder="First Name" required />
+        <input type="text" id="lastName" placeholder="Last Name" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="text" id="mobile" placeholder="Mobile" required />
+        <h4>Your Message</h4>
+        <textarea placeholder="How can we assist you?" required></textarea>
+        <input type="submit" value="Send Message" id="button" />
+      </form>
+    </div>
+    
+    <!-- Restaurant Details Section -->
+    <div class="details">
+      <h2>Our Information</h2>
+      <p><strong>Restaurant Address:</strong> E12,5RF Manor Park,East London</p>
+      <p><strong>Phone Numbers:</strong> 
+        <a href="tel:+447424265724">07424265724</a>, 
+        <a href="tel:+447301354275">07301354275</a>, 
+        <a href="tel:+447538329961">07538329961</a>, 
+        <a href="tel:+447405972434">07405972434</a>
+      </p>
+      <p><strong>Email Addresses:</strong> 
+        <a href="mailto:samirhmedefti17@gmail.com">samirhmedefti17@gmail.com</a>, 
+        <a href="mailto:rohanulislam9@gmail.com">rohanulislam9@gmail.com</a>, 
+        <a href="mailto:shahriar420@gmail.com">shahriar420@gmail.com</a>, 
+        <a href="mailto:binayakp69@gmail.com">binayakp69@gmail.com</a>
+      </p>
+      <p><strong>Business Hours:</strong> 9:00 AM - 5:00 PM</p>
+      <p><strong>Follow Us on Social Media:</strong> 
+        <a href="https://facebook.com/heavenfood" target="_blank">https://facebook.com/heavenfood</a>
+      </p>
+    </div>
+
+    <script>
+      // JavaScript for form validation and alert
+      document.getElementById("contactForm").addEventListener("submit", function(event) {
+        // Prevent form submission if validation fails
+        event.preventDefault();
+
+        // Get form values
+        const firstName = document.getElementById("firstName").value;
+        const lastName = document.getElementById("lastName").value;
+        const email = document.getElementById("email").value;
+        const mobile = document.getElementById("mobile").value;
+        const message = document.querySelector("textarea").value;
+
+        // Simple validation: Check if all fields are filled
+        if (firstName === "" || lastName === "" || email === "" || mobile === "" || message === "") {
+          alert("Please fill in all the fields.");
+        } else {
+          // If all fields are filled, show confirmation alert
+          alert("Your message has been sent successfully!");
+          
+          // Optionally reset the form
+          document.getElementById("contactForm").reset();
+        }
+      });
+    </script>
+  </body>
+</html>
